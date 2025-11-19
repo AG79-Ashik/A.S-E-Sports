@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Support — Royal Esports</title>
+<style>
+  :root {
+    --bg: #000000;
+    --card: #16002c;
+    --accent: #7a3fff;
+    --text: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* Header */
+  .header {
+    background: var(--accent);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Main content */
+  .container {
+    padding: 20px;
+  }
+
+  .info {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .info span {
+    display: block;
+    font-size: 15px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(75%) sepia(83%) saturate(300%) hue-rotate(120deg);
+    cursor: pointer;
+  }
+
+  .time {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <button class="back-btn" onclick="goBack()">←</button>
+    <span>Customer Support</span>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="info">
+      <span>Address : India</span>
+    </div>
+
+    <div class="info">
+      <span>Phone : +910000000000</span>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" class="icon" title="Call">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icon" title="WhatsApp">
+      </div>
+    </div>
+
+    <div class="info">
+      <span>Email : support@Asesp.com</span>
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="icon" title="Email">
+    </div>
+
+    <div class="info">
+      <span>Instagram : www.instagram.com</span>
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="icon" title="Instagram">
+    </div>
+
+    <div class="info">
+      <span>Street : Mumbai</span>
+    </div>
+
+    <div class="info">
+      <span>Time : 10:00 am to 11:00 pm</span>
+    </div>
+  </div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>A.S E-Sports — App Download & Details</title>
+<link rel="icon" href="assets/favicon.png" />
+<style>
+  :root{
+    --bg:#05000a; --card:#0f0620; --accent:#00e6d5; --muted:#a8a8a8; --text:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Inter, Poppins, system-ui; color:var(--text)}
+  body{background:linear-gradient(180deg,#04000a 0%, #070018 100%);padding:24px;}
+  .container{max-width:1100px;margin:0 auto;}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:56px;height:56px;border-radius:12px;object-fit:cover;box-shadow:0 6px 24px rgba(0,0,0,.6)}
+  h1{font-size:1.25rem;color:var(--accent);letter-spacing:.6px}
+  nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
+  .hero{display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:22px;align-items:start}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(0,230,213,0.08);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(0,0,0,.6)}
+  .left .logo{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .app-logo{width:180px;height:180px;border-radius:22px;object-fit:cover;border:2px solid rgba(0,230,213,.08);box-shadow:0 20px 50px rgba(0,230,213,0.06)}
+  .meta{width:100%;margin-top:8px}
+  .meta .row{display:flex;justify-content:space-between;padding:10px 8px;border-radius:10px;margin-top:8px;background:rgba(255,255,255,0.01)}
+  .meta .label{color:var(--muted);font-size:0.9rem}
+  .meta .value{font-weight:600;color:var(--text)}
+  .download-area{text-align:center;margin-top:14px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;border:none;cursor:pointer;background:var(--accent);color:#000;text-decoration:none;box-shadow:0 10px 30px rgba(0,230,213,0.14)}
+  .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);box-shadow:none}
+  .right .intro{display:flex;flex-direction:column;gap:10px}
+  .intro h2{color:var(--accent);font-size:1.6rem}
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+  .feature{background:rgba(255,255,255,0.01);padding:12px;border-radius:10px}
+  .feature h4{margin-bottom:6px;font-size:0.95rem}
+  .specs{margin-top:18px}
+  .specs pre{background:transparent;color:var(--muted);font-size:0.92rem;line-height:1.5;white-space:pre-wrap}
+  .changelog{margin-top:14px;background:rgba(0,0,0,0.25);padding:12px;border-radius:8px;color:var(--muted)}
+  .screens{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;justify-content:flex-start}
+  .screens img{width:150px;height:300px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.06);cursor:pointer;transition:transform 0.3s ease, box-shadow 0.3s ease}
+  .screens img:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(0,230,213,0.25)}
+  footer{margin-top:28px;color:var(--muted);text-align:center;font-size:0.9rem}
+
+  /* Popup Modal */
+  .img-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;pointer-events:none;transition:opacity 0.25s ease}
+  .img-modal.active{opacity:1;pointer-events:auto}
+  .img-modal img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+  .img-modal .close{position:absolute;top:24px;right:32px;font-size:2rem;color:var(--accent);cursor:pointer;user-select:none}
+
+  /* responsive */
+  @media (max-width:880px){
+    .hero{grid-template-columns:1fr;align-items:center}
+    .features{grid-template-columns:1fr}
+    .screens img{width:110px;height:220px}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src= "images/file_0000000087107208b867633ba6e5356c.png" alt="A.S E-Sports Logo" />
+        <div>
+          <h1>A.S E-Sports</h1>
+          <div style="color:var(--muted);font-size:.85rem">Official Tournament App</div>
+        </div>
+      </div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="#download">Download</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card left">
+        <div class="logo" role="region" aria-label="App logo and download">
+          <img class="app-logo" src="images/Picsart_25-11-07_16-10-26-551.jpg" alt="A.S E-Sports App Logo" />
+          <div style="text-align:center">
+            <div style="font-weight:700;font-size:1.05rem">A.S E-Sports — Official App</div>
+            <div style="color:var(--muted);font-size:.9rem">Tournament hub, match-making, live leaderboards</div>
+          </div>
+        </div>
+
+        <div class="meta" id="meta">
+          <div class="row"><div class="label">File Name</div><div class="value" id="fileName">AS_Esports_v1.2.apk</div></div>
+          <div class="row"><div class="label">Size</div><div class="value" id="fileSize">-- MB</div></div>
+          <div class="row"><div class="label">Version</div><div class="value" id="version">1.0</div></div>
+          <div class="row"><div class="label">Release Date</div><div class="value" id="releaseDate">9/11/2025</div></div>
+          <div class="row"><div class="label">Recommended OS</div><div class="value" id="minOS">Android 7.0+</div></div>
+        </div>
+
+        <div class="download-area" id="download">
+          <a class="btn" id="downloadBtn" href="A.S eSports.apk" download>
+            Download APK — <span id="downloadSizeText">-- MB</span>
+          </a>
+          <div style="margin-top:10px">
+            <a class="btn secondary" id="whatIncludedBtn" href="details .html">App Details</a>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:.86rem">
+          <strong>Important:</strong> Ensure users accept installations from unknown sources if APK is side-loaded. For Play Store publish use AAB and follow Play Console instructions.
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="intro">
+          <h2 id="appTitle">A.S E-Sports — Tournament & Match Hub</h2>
+          <div style="color:var(--muted)">Compete in Free Fire style tournaments, check leaderboards, register teams, claim prizes, and follow live brackets.</div>
+        </div>
+
+        <div class="features" style="margin-top:12px">
+          <div class="feature">
+            <h4>Primary Features</h4>
+            <ul style="color:var(--muted);margin-top:6px">
+              <li>Tournament registration and match schedule</li>
+              <li>Real-time leaderboard</li>
+              <li>PhonePe/UPI prize disbursement (admin controlled)</li>
+              <li>Profile, Rank & Status</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <h4>Security & Performance</h4>
+            <ul style="color:var(--muted);margin-top:6px">
+              <li>HTTPS API communication</li>
+              <li>JWT based auth (token expiry + refresh)</li>
+              <li>Resource shrinking & code obfuscation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="specs">
+          <h3 style="color:var(--accent);margin-top:12px">App Specifications</h3>
+          <pre id="specText">
+• Package: com.asesports.app
+• Current version: 1.2 (build 102)
+• Min Android: 7.0 (API 24)
+• Target Android: 13 (API 33)
+• Typical APK size (compressed): 42.6 MB
+• Recommended storage free: 150 MB (install + cache)
+• Network: Required (Realtime matches), offline: partial (profiles)
+          </pre>
+        </div>
+
+        <div class="changelog" aria-live="polite">
+          <strong>Changelog (v1.2)</strong>
+          <ul style="margin-top:8px;color:var(--muted)">
+            <li>New: Tournament bracket UI & live notifications</li>
+            <li>Improved: Matchmaking logic & reduced latency</li>
+            <li>Fix: Crash on profile image upload</li>
+          </ul>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="screens" style="margin-top:10px">
+          <img src="images/Picsart_25-11-07_16-18-23-851.jpg" alt="screenshot 1"/>
+          <img src="images/Picsart_25-11-10_10-05-58-868.jpg"alt="screenshot 2"/>
+          <img src="images/Picsart_25-11-10_10-07-01-426.jpg" alt="screenshot 3"/>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:.92rem">
+          <strong>Permissions (required)</strong>
+          <div>Internet, Network state, Read/Write storage, Camera, Notifications</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 A.S E-Sports • For support: <a href="mailto:support@as-esports.example" style="color:var(--accent)">support@as-esports.example</a>
+    </footer>
+  </div>
+
+  <!-- Image Modal -->
+  <div class="img-modal" id="imgModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImg" src="" alt="expanded screenshot">
+  </div>
+
+<script>
+(function(){
+  const downloadUrl = document.getElementById('downloadBtn').href;
+  const fileNameEl = document.getElementById('fileName');
+  const sizeEl = document.getElementById('fileSize');
+  const downloadSizeText = document.getElementById('downloadSizeText');
+
+  try {
+    const urlParts = downloadUrl.split('/');
+    const name = urlParts[urlParts.length-1] || 'AS_Esports_v1.apk';
+    fileNameEl.textContent = name;
+  } catch(e){}
+
+  fetch(downloadUrl, { method: 'HEAD' })
+    .then(res => {
+      const cl = res.headers.get('content-length');
+      if (cl) {
+        const sizeMB = (parseInt(cl,10) / (1024*1024));
+        const nice = sizeMB < 1 ? (sizeMB*1024).toFixed(1)+' KB' : sizeMB.toFixed(2)+' MB';
+        sizeEl.textContent = nice;
+        downloadSizeText.textContent = nice;
+      } else {
+        sizeEl.textContent = 'Unknown';
+        downloadSizeText.textContent = 'Unknown';
+      }
+    })
+    .catch(()=>{
+      sizeEl.textContent = 'Approx. 40.0 MB';
+      downloadSizeText.textContent = '40.0 MB';
+    });
+
+  // Image enlarge system
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeModal = document.getElementById("closeModal");
+
+  document.querySelectorAll(".screens img").forEach(img=>{
+    img.addEventListener("click",()=>{
+      modalImg.src=img.src;
+      modal.classList.add("active");
+    });
+  });
+  closeModal.addEventListener("click",()=>modal.classList.remove("active"));
+  modal.addEventListener("click",e=>{
+    if(e.target===modal)modal.classList.remove("active");
+  });
+})();
+</script>
+</body>
+</html>

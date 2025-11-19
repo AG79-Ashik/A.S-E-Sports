@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.S eSports — Free Fire Tournament App</title>
+<link rel="icon" href="assets/logo.png">
+<style>
+  :root {
+    --bg: #05000a;
+    --card: #120b24;
+    --accent: #00e6d5;
+    --muted: #aaa;
+    --text: #fff;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #0c0014, #1b0a32);
+    border-bottom: 1px solid var(--accent);
+  }
+  header img {
+    width: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  header h1 {
+    font-size: 28px;
+    color: var(--accent);
+  }
+  header p {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .container {
+    padding: 25px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid #1e1133;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(0, 230, 213, 0.1);
+  }
+
+  .card h2 {
+    color: var(--accent);
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .features ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  .features li {
+    padding: 6px 0;
+    color: var(--muted);
+  }
+
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .screenshot-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .screenshot-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .download-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+
+  .download-btn:hover {
+    background: #00fff3;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1e1133;
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/Picsart_25-11-07_16-10-26-551.jpg" alt="A.S eSports Logo">
+  <h1>A.S eSports — Free Fire Tournament App</h1>
+  <p>Play • Compete • Earn Rewards</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About This App</h2>
+    <p>
+      <strong>A.S eSports</strong> is a professional Free Fire tournament platform where players can join competitive matches,
+      participate in daily events, and win exciting rewards. Designed for esports enthusiasts, this app provides a 
+      smooth registration system, wallet integration, and a fair play environment for all players.
+    </p>
+  </div>
+
+  <div class="card features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>🔥 Fast & Secure Login/Signup System with Profile Picture</li>
+      <li>💰 Real-Time Wallet System for Entry Fees and Winnings</li>
+      <li>🎮 Custom Room Matches (Solo, Duo, Squad)</li>
+      <li>🏆 Live Match Details, Results & Leaderboards</li>
+      <li>📱 Modern Neon UI with Smooth Animations</li>
+      <li>🛠 24/7 Customer Support Page</li>
+      <li>🚀 Refer & Earn Program to Invite Friends</li>
+      <li>📧 OTP-based Forgot Password (EmailJS Integration)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Screenshots</h2>
+    <div class="screenshot-gallery">
+      <img src="images/Picsart_25-11-07_16-18-23-851.jpg" alt="Home Page Screenshot">
+      <img src="images/Picsart_25-11-10_10-05-58-868.jpg" alt="Tournament Page">
+      <img src="images/Picsart_25-11-10_10-07-01-426.jpg" alt="Profile Page">
+      <img src="images/Picsart_25-11-10_10-44-04-622.jpg" alt="Wallet Section">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Developer Info</h2>
+    <p>
+      Developed by <strong>Ashik</strong>, this project represents a step toward building a complete esports ecosystem
+      for Free Fire lovers. The app is built using <strong>HTML, CSS, and JavaScript</strong> with neon effects, animation, and
+      localStorage-based authentication.
+    </p>
+    <a href="Downloadwebsite.html" class="download-btn">⬇️ Download Now</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 A.S eSports — All Rights Reserved.
+</footer>
+
+</body>
+</html>
